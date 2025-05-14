@@ -7,7 +7,6 @@ export async function signin(data: LoginState) {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/api/Accounts/login`,
       {
-        mode: 'no-cors',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json;charset=UTF-8',
