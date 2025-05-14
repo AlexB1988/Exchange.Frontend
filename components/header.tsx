@@ -4,13 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Form from 'next/form';
 import useSession from '@/hooks/use-session';
-import { useModalStore } from '@/components/stores/modal-store';
-import { Input } from '@/components/ui/input';
+import { useModalStore } from './stores/modal-store';
+import { Input } from './ui/input';
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
-} from '@/components/ui/navigation-menu';
+} from './ui/navigation-menu';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -19,10 +19,10 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+} from './ui/dropdown-menu';
 
-import { ThemeToggle } from '@/components/theme/theme-toggle';
-import { Button } from '@/components/ui/button';
+import { ThemeToggle } from './theme/theme-toggle';
+import { Button } from './ui/button';
 import { Search } from 'lucide-react';
 import { Skeleton } from './ui/skeleton';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
@@ -102,22 +102,22 @@ export default function Header() {
                         </AvatarFallback>
                       </Avatar>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="px-6 py-4">
-                      <DropdownMenuLabel className="mb-2 w-46 p-0 text-base hover:bg-none focus:bg-none">
+                    <DropdownMenuContent className="w-46 space-y-2 px-6 py-4">
+                      <DropdownMenuLabel className="p-0 text-base hover:bg-none focus:bg-none">
                         Баланс
                       </DropdownMenuLabel>
                       <DropdownMenuSeparator />
-                      <DropdownMenuItem className="mb-2 p-0 text-base">
+                      <DropdownMenuItem className="p-0 text-base">
                         Мои заказы
                       </DropdownMenuItem>
-                      <DropdownMenuItem className="mb-2 p-0 text-base">
+                      <DropdownMenuItem className="p-0 text-base">
                         Сообщения
                         <DropdownMenuShortcut>500</DropdownMenuShortcut>
                       </DropdownMenuItem>
-                      <DropdownMenuItem className="mb-2 p-0 text-base">
+                      <DropdownMenuItem className="p-0 text-base">
                         Профиль
                       </DropdownMenuItem>
-                      <DropdownMenuItem className="mb-2 p-0 text-base">
+                      <DropdownMenuItem className="p-0 text-base">
                         Портфолио
                       </DropdownMenuItem>
                       <DropdownMenuItem className="mb-4 p-0 text-base">

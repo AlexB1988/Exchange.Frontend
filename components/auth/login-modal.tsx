@@ -136,26 +136,28 @@ export default function LoginForm() {
           </form>
         </Form>
 
-        <div className="flex">
+        <div className="mb-10 flex justify-end">
           <a
             href="#"
-            className="text-foreground text-sm leading-none transition-opacity hover:opacity-80"
+            className="text-foreground text-xs leading-none transition-opacity hover:opacity-80"
           >
             Забыли пароль?
           </a>
         </div>
-        <div className="">
-          Нет аккаунта?{' '}
-          <a
-            className="text-blue-700 hover:text-blue-700/80"
-            href={''}
-            onClick={(e) => {
-              e.preventDefault();
-              openSignup();
-            }}
-          >
-            Зарегистрироваться
-          </a>
+        <div className="flex justify-center">
+          <p className="text-sm">
+            Нет аккаунта?{' '}
+            <a
+              className="text-blue-400 transition-colors hover:text-blue-400/80"
+              href={''}
+              onClick={(e) => {
+                e.preventDefault();
+                openSignup();
+              }}
+            >
+              Зарегистрироваться
+            </a>
+          </p>
         </div>
       </DialogContent>
     </Dialog>

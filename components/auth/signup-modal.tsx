@@ -70,13 +70,16 @@ export default function SignupForm() {
 
   return (
     <Dialog open={isSignupOpen} onOpenChange={(open) => !open && closeAll()}>
-      <DialogContent aria-describedby={undefined} className="w-100 gap-6">
-        <DialogHeader>
+      <DialogContent aria-describedby={undefined} className="w-100 gap-0">
+        <DialogHeader className="mb-6">
           <DialogTitle>Регистрация</DialogTitle>
         </DialogHeader>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="mb-8 space-y-4"
+          >
             <FormField
               control={form.control}
               name="email"
@@ -137,13 +140,13 @@ export default function SignupForm() {
                     variant="ghost"
                     size="icon"
                     tabIndex={-1}
-                    className="absolute top-5.5 right-0 hover:bg-transparent focus-visible:border-none focus-visible:ring-0 dark:hover:bg-transparent"
+                    className="absolute top-5.5 right-0 size-8 hover:bg-transparent focus-visible:border-none focus-visible:ring-0 dark:hover:bg-transparent"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
-                      <EyeOff className="h-4 w-4" />
+                      <EyeOff className="size-4" />
                     ) : (
-                      <Eye className="h-4 w-4" />
+                      <Eye className="size-4" />
                     )}
                   </Button>
                   <FormMessage />
@@ -154,7 +157,7 @@ export default function SignupForm() {
               control={form.control}
               name="confirmPassword"
               render={({ field }) => (
-                <FormItem className="relative">
+                <FormItem className="relative mb-8">
                   <FormLabel>Подтверждение пароля</FormLabel>
                   <FormControl>
                     <Input
@@ -169,13 +172,13 @@ export default function SignupForm() {
                     variant="ghost"
                     size="icon"
                     tabIndex={-1}
-                    className="absolute top-5.5 right-0 hover:bg-transparent focus-visible:border-none focus-visible:ring-0 dark:hover:bg-transparent"
+                    className="absolute top-5.5 right-0 size-8 hover:bg-transparent focus-visible:border-none focus-visible:ring-0 dark:hover:bg-transparent"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                   >
                     {showConfirmPassword ? (
-                      <EyeOff className="h-4 w-4" />
+                      <EyeOff className="size-4" />
                     ) : (
-                      <Eye className="h-4 w-4" />
+                      <Eye className="size-4" />
                     )}
                   </Button>
                   <FormMessage />
@@ -200,14 +203,20 @@ export default function SignupForm() {
         </Form>
 
         <DialogFooter>
-          <p className="text-center text-sm">
-            Нажимая «Зарегистрироваться» или на кнопки сервисов, вы
-            подтверждаете, что полностью принимаете{' '}
-            <a href="#" className="text-blue-700 hover:text-blue-700/80">
+          <p className="text-xs">
+            Нажимая «Зарегистрироваться» вы подтверждаете, что полностью
+            принимаете условия <br />
+            <a
+              href="#"
+              className="text-blue-400 transition-colors hover:text-blue-400/80"
+            >
               условия соглашения
             </a>{' '}
-            и ознакомились с{' '}
-            <a href="#" className="text-blue-700 hover:text-blue-700/80">
+            и ознакомились с<br />
+            <a
+              href="#"
+              className="text-blue-400 transition-colors hover:text-blue-400/80"
+            >
               политикой конфиденциальности
             </a>
           </p>
