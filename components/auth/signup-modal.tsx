@@ -205,7 +205,7 @@ export default function SignupForm() {
         <DialogFooter>
           <p className="text-xs">
             Нажимая «Зарегистрироваться» вы подтверждаете, что полностью
-            принимаете условия <br />
+            принимаете <br />
             <a
               href="#"
               className="text-blue-400 transition-colors hover:text-blue-400/80"
