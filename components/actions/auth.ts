@@ -11,7 +11,7 @@ export async function signin(data: LoginState) {
         headers: {
           'Content-Type': 'application/json;charset=UTF-8',
         },
-        credentials: 'include',
+        /*  credentials: 'include', */
         body: JSON.stringify(data),
       },
     );
